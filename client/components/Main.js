@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import _ from 'lodash';
 
 export default React.createClass({
   render() {
@@ -7,8 +8,8 @@ export default React.createClass({
       <div>
         <h1>
           <Link to="/">Reduxstagram</Link>
-          {React.cloneElement(this.props.children, this.props)}
         </h1>
+        {React.cloneElement(this.props.children, _.omit(this.props, 'ref', 'key'))}
       </div>
     );
   }
