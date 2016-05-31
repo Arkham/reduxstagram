@@ -17,13 +17,32 @@ body
   flex-flow row wrap
   justify-content space-between
   max-width 1200px
-  margin auto
+  margin 0 auto
 
 .grid-figure
-  width 30%
-  margin 0 auto 3rem auto
-  padding 1rem
-  box-shadow 0 0 2px black
+  flex-basis calc(25%)
+  flex-grow 1
+  flex-shrink 0
+  border 1px solid lightgray
+  padding 2rem
+  box-shadow 0 0 5px rgba(0,0,0,0.03)
+
+.single-photo
+  border 1px solid lightgray
+  max-width 900px
+  margin 0 auto
+  background white
+  display flex
+
+  .grid-figure
+    margin 0 2rem 0 0
+    border-width 0 1px 0 0
+    flex 1 0 60%
+    max-width 60%
+
+  .comments
+    flex 1 0 40%
+    max-width 40%
 
 .grid-photo-wrap
   position relative
@@ -31,6 +50,7 @@ body
 .grid-photo
   width calc(100%)
 
+// Heart animation
 .likes-heart
   background url(http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png) center no-repeat
   background-size contain
@@ -44,8 +64,6 @@ body
   top 50%
   margin-left -2rem
   margin-top -2rem
-
-.likes-heart
   opacity 0
   transition all 0.5s // time to fade out after its done
   transform scale(5) // this is the "end state"
@@ -66,6 +84,7 @@ body
   display flex
   justify-content space-between
 
+// Buttons
 button, .button
   border 2px solid lighten(grey, 90%)
   background none
@@ -79,11 +98,13 @@ button, .button
   color blue
   transition all 0.2s
   box-sizing padding-box
+
   &:hover, &:focus
     cursor pointer
     border-color blue
     outline 0
 
+// Comment icon
 .speech-bubble
   size = 1.25rem
   width size * 1.2
