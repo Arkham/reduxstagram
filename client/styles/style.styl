@@ -9,6 +9,9 @@ html
 *:after
   box-sizing inherit
 
+figure
+  margin 0
+
 body
   background offwhite
 
@@ -20,12 +23,14 @@ body
   margin 0 auto
 
 .grid-figure
-  flex-basis calc(25%)
-  flex-grow 1
-  flex-shrink 0
+  display flex
+  flex-direction column
+  flex 1 0 30%
+  max-width 30%
   border 1px solid lightgray
   padding 2rem
   box-shadow 0 0 5px rgba(0,0,0,0.03)
+  margin-bottom 2rem
 
 .single-photo
   border 1px solid lightgray
@@ -83,6 +88,7 @@ body
 .control-buttons
   display flex
   justify-content space-between
+  margin-top auto
 
 // Buttons
 button, .button
