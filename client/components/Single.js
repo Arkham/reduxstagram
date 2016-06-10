@@ -15,7 +15,7 @@ export default React.createClass({
     return (
       <div className="single-photo">
         <Photo {...this.props} i={i} post={post} />
-        <Comments postComments={postComments}/>
+        <Comments postComments={postComments} {...this.props}/>
       </div>
     );
   }
