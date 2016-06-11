@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --config ./webpack.config.prod.js --progress --colors",
+    "postinstall": "webpack --config ./webpack.config.prod.js --progress --colors",
     "start": "node server.js"
   },
   "repository": {
