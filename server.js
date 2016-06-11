@@ -23,11 +23,5 @@ app.get('/', function(_, res) {
   res.sendFile(path.join(__dirname, './index.html'));
 });
 
-app.listen(port, 'localhost', function(err) {
-  if (err) {
-    console.log(err);
-    return;
-  }
-
-  console.log(`Listening at http://localhost:${port}`);
-});
+app.listen(port);
+console.log(`Listening at http://localhost:${port}`);
