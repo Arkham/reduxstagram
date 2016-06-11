@@ -17,8 +17,10 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
-app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+app.use('/public', express.static(path.join(__dirname, './public')));
+
+app.get('/', function(_, res) {
+  res.sendFile(path.join(__dirname, './index.html'));
 });
 
 app.listen(port, 'localhost', function(err) {
